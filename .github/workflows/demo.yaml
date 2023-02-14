@@ -21,6 +21,16 @@ jobs:
     steps:
       - run: echo "This is an integration step"
       - run: exit 1
+  artifact:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: save artifact
+        run: echo "this is an artifact step" > mero.txt
+      - name: archive artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mero
+          path: .
 
   prod:
     runs-on: ubuntu-20.04
