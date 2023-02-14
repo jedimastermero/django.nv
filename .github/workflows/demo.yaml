@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mero
-          path: .
+          path: taskManager
 
   prod:
     runs-on: ubuntu-20.04
